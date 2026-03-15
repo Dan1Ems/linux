@@ -128,7 +128,8 @@ A filosofia Unix segue a linha de que todo programa precisa ser feito para ser p
 
 - O que muda entre Windows e Linux se ambos fazem o papel de SO?
 
-O Windows já vem com uma serie de programas escolhidos pela Microsoft ao instalar o sistema operacional (Pense em algo como a Interface Gráfica, Windows Media Player, Exibidor de imagens, Windows Defender, Copilot), enquanto sistemas Linux vem apenas com o Kernel e o sistema operacional, sendo que qualquer outro programa adicional deve ser instalado pelo próprio usuário, ou seja, o sistema operacional pode ser customizado para ser da forma que você quiser.
+O Windows já vem com uma serie de programas escolhidos pela Microsoft ao instalar o sistema operacional (Pense em algo como a Interface Gráfica, Windows Media Player, Exibidor de imagens, Windows Defender, Copilot), enquanto sistemas Linux vem apenas com o Kernel e o sistema operacional, sendo que qualquer outro programa adicional deve ser instalado pelo próprio usuário, ou seja, o sistema operacional pode ser customizado para ser da forma que você quiser. 
+Outra diferença é a capacidade de analisar e modificar o código do kernel e dos proprios sistemas operacionais, por ser um SO proprietário o Windows não dá essa liberdade ao usuário enquanto o Linux, por ser um kernel que utiliza a licensa GNU, dá essa liberdade.
 
 - O Windows tem kernel?
 
@@ -144,7 +145,7 @@ O Windows é considerado padrão pelo mercado consumidor e é o sistema operacio
 
 - O que o Windows esconde do usuário que o Linux costuma expôr mais?
 
-O Windows, principalmente o Windows 11, é conhecido por instalar prog
+O Windows, principalmente o Windows 11, é conhecido por instalar programas que por muitos podem ser considerados indesejados ou desnecessários, também chamados de bloatware, também há receios por parte de alguns usuários quanto a questão de privacidade e segurança de dados no Windows, principalmente com o maior foco da Microsoft em inteligência artificial através do Co-pilot, que utiliza dados de uso e navegação do Windows de seus usuários para treinar o Co-pilot.
 
 ## Linux
 
