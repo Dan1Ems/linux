@@ -7,6 +7,7 @@ Quando ligamos um computador, temos vários componentes físicos. O sistema oper
 Sem sistema operacional, cada programa teria que conversar diretamente com o hardware. O SO simplifica isso e cria uma base padronizada para o funcionamento da máquina.
 
 2. Unix, Windows e Linux
+   
 O Windows é um sistema operacional proprietário, desenvolvido pela Microsoft, ou seja, seu código-fonte não é aberto ao público. Ele é muito popular em computadores pessoais, principalmente por causa da compatibilidade com softwares.
 O Linux é baseado em software livre e código aberto. Isso significa que seu código pode ser estudado, modificado e distribuído.
 Uma diferença importante é que o Windows costuma ser mais padronizado, a maioria das pessoas usa versões parecidas do sistema. Já no Linux, existem várias distribuições, cada uma com escolhas próprias.
