@@ -7,15 +7,21 @@ Mas ele não é um programa qualquer. Ele é um software de sistema, ou seja, um
 
 - Ele é um programa ou um conjunto de programas?
 
-Na prática, um sistema operacional não costuma ser um único programa isolado, ele é formado por várias partes com funções diferentes, como:
+Na prática, um sistema operacional não costuma ser um único programa isolado, ele é formado por várias partes com funções diferentes, como: gerenciamento de processos, gerenciamento de arquivos, interface gráfica, gerenciamento de memória, alocação de recursos, segurança, gerenciamento de dispositivos, etc.
 
 - Qual é a diferença entre software comum e software de sistema?
 
+O software de sistema disponibiliza uma interface cujo, através dessa interface, os softwares comuns (os aplicativos) irão funcionar. Ele fica entre o kernel (E consequentemente o hardware) e os softwares comuns.
+
 - Se o SO é software, como ele controla o hardware?
+
+Através do kernel, o "coração" do sistema operacional, que com o uso de drivers de dispositivos (softwares especializados que atuam no nível de kernel) faz com que os componentes de hardware funcionem e possam ser controlados pelo sistema operacional como um todo.
 
 - Como o hardware "obedece" o software?
 
 - O kernel é o sistema operacional inteiro?
+
+Não! Porém ele é parte mais importante do sistema operacional, ele é como o alicerce do sistema operacional. No caso do Linux, o Linux é o próprio kernel, que devido a sua natureza "open-source", diversos desenvolvedores ao redor do mundo utilizam desse kernel e criam seus próprios sistemas operacionais.
 
 - Qual é a diferença entre kernel, sistema operacional e distribuição?
 
