@@ -15,9 +15,7 @@ O software de sistema disponibiliza uma interface cujo, através dessa interface
 
 - Se o SO é software, como ele controla o hardware?
 
-Através do kernel, o "coração" do sistema operacional, que com o uso de drivers de dispositivos (softwares especializados que atuam no nível de kernel) faz com que os componentes de hardware funcionem e possam ser controlados no nível do sistema operacional.
-
-- Como o hardware "obedece" o software?
+Através do kernel, o "coração" do sistema operacional, que com o uso de drivers de dispositivos (softwares especializados que atuam no nível de kernel) faz com que os componentes de hardware funcionem e possam ser controlados pelo software (tanto o SO quanto softwares comuns).
 
 - O kernel é o sistema operacional inteiro?
 
@@ -66,101 +64,190 @@ Ligar o computador é fornecer energia e iniciar os circuitos básicos. Iniciar 
 
 - Por que o SO não é a primeira coisa a ser executada?
 
+Pois o firmware e a bios precisam inicializar, testar e configurar os componentes de hardware para assim então conseguir ler o dispositivo de boot e inicializar o SO.
+
 - O que é firmware?
+
+Firmware é um software de baixo nível gravado em um hardware (chip físico), geralmente em memória ROM ou flash. Ele é responsável por controlar funções básicas do dispositivo, como inicialização do hardware e comunicação com outros componentes e softwares do sistema, o software em questão sendo a BIOS/UEFI.
 
 - Qual é a diferença entre BIOS e UEFI?
 
+UEFI (Unified Extensible Firmware Interface) é o firmware moderno que substitui a BIOS tradicional, oferecendo uma interface gráfica mais amigável, opções de segurança (como o Secure Boot) e inicialização mais rápida. Enquanto a BIOS é limitada a 16 bits e a discos de até 2 TB, a UEFI opera em 32 ou 64 bits e oferece suporte a discos com mais de 2 TB.
+
 - O que é POST?
+
+POST é uma sigla que significa "Power-On Self-Test", é a primeira etapa da inicialização do computador feita pelo firmware onde o mesmo verifica o funcionamento dos componentes essenciais de hardware, essa é uma etapa feita não pela imagem do monitor mas por luzes e sons vindos da própria placa-mãe.
 
 - O que o computador testa quando liga?
 
-- Quais dispotivios são verificados na inicialização?
+Processador, Memoria RAM, placa de vídeo, discos e a própria placa-mãe.
 
 - Por que o computador procura um dispositivo de boot?
 
+Pois é nele onde está localizado o sistema operacional do seu computador.
+
 - O que faz um disco ser bootável?
+
+Ter um sistema operacional instalado no disco, SSD ou ate mesmo pen-drive.
 
 - O que acontece se não houver dispositivo de boot?
 
+A BIOS/UEFI aciona uma mensagem de erro informando que não foi possivel encontrar um dispositivo de boot, outras situações que podem ocorrer são: uma tela preta após a tela de BIOS, o computador pode ficar preso na tela de BIOS ou o computador pode entrar em um loop de busca por um dispositivo bootavel.
+
 - O que é bootloader?
+
+Bootloader é o software que inicializa o kernel e por sua vez, o sistema operacional de sua máquina, em Linux é comum a utilização do GRUB, que é um sistema unificado de boot, como seu bootloader, o GRUB é especialmente util pois ele facilita situações de dual-boot ou para a escolha de versões de Linux quando há mais de uma versão do mesmo SO Linux no computador.
 
 - Quando o kernel entra em execução e o que acontece quando ele carrega?
 
+Logo após a BIOS/UEFI detectar o drive bootavel e inicia-lo. Quando o kernel do SO é inicializado ele inicia os serviços do sistema operacional, como gerenciamento de memória, detecção de hardware e inicialização do sistema de gerenciamento de arquivos.
+
 - Como a interface gráfica aparece depois da inicialização?
+
+É nesse momento em que o sistema operacional de sua escolha aparece em seu monitor da maneira que você está acostumado!
 
 ## Unix
 
 - Por que Unix foi tão influente?
 
+O Unix foi criado para ser um sistema operacional unificado, ou seja, que consegue rodar em qualquer máquina independente de hardware, essa padronização feita pelo o Unix permitiu que o desenvolvimento de programas fosse o mesmo para todos os sistemas, o Unix é a base em que sistemas operacionais tais como o Linux e o iOS foram desenvolvidos.
+
 - O Linux é Unix?
+
+O Linux na verdade foi feito na base do Minix, uma versão modificada do Unix feita para fins educativos. O Linux pode sim ser considerado Unix mas ele acabou virando muito mais que isso com o passar do tempo!
 
 - O que significa Unix-like?
 
+Unix-like significa que o sistema operacional em questão foi feito sob a base do Unix ou suas variações. Isso significa que o SO em questão possuir um sistema de arquivos estruturado de forma hierarquica, uma interface de linha de comando - CLI (Que permite a interação do usuário com o SO e qualquer programa instalado nele através de texto), capacidade de gerenciamento de multiplos usuários além de seguir a ideia de que "tudo é um arquivo".
+
 - O que significa a filosofia Unix?
+
+A filosofia Unix segue a linha de que todo programa precisa ser feito para ser pequeno, modular e servir uma única funcionalidade e que funciona com outros programas desenvolvidos da mesma maneira, unidos através de linhas de texto.
 
 ## Windows
 
 - O que muda entre Windows e Linux se ambos fazem o papel de SO?
 
+O Windows já vem com uma serie de programas escolhidos pela Microsoft ao instalar o sistema operacional (Pense em algo como a Interface Gráfica, Windows Media Player, Exibidor de imagens, Windows Defender, Copilot), enquanto sistemas Linux vem apenas com o Kernel e o sistema operacional, sendo que qualquer outro programa adicional deve ser instalado pelo próprio usuário, ou seja, o sistema operacional pode ser customizado para ser da forma que você quiser. 
+Outra diferença é a capacidade de analisar e modificar o código do kernel e dos proprios sistemas operacionais, por ser um SO proprietário o Windows não dá essa liberdade ao usuário enquanto o Linux, por ser um kernel que utiliza a licensa GNU, dá essa liberdade.
+
 - O Windows tem kernel?
+
+Sim, o Windows possui um kernel, o Windows NT, ele é um kernel proprietário da Microsoft e não foi construido tendo o Unix como base, ou seja, não utiliza de seu kernel ou de sua filosofia.
 
 - O Windows usa terminal também?
 
+De certa forma sim, o Windows possui um emulador de terminal com o nome "Windows Terminal" e nele você pode usar o prompt de commando e o Windows Powershell, que não são exatamente terminais mas são interpretadores de linhas de comando.
+
 - Por que a maioria dos programas comerciais são feitos primeiro para Windows?
 
+O Windows é considerado padrão pelo mercado consumidor e é o sistema operacional mais utilizado do mundo, tendo isso em mente é comum que aplicações comerciais são desenvolvidas primeiro para Windows.
+
 - O que o Windows esconde do usuário que o Linux costuma expôr mais?
+
+O Windows, principalmente o Windows 11, é conhecido por instalar programas que por muitos podem ser considerados indesejados ou desnecessários, também chamados de bloatware, também há receios por parte de alguns usuários quanto a questão de privacidade e segurança de dados no Windows, principalmente com o maior foco da Microsoft em inteligência artificial através do Co-pilot, que utiliza dados de uso e navegação do Windows de seus usuários para treinar o Co-pilot.
 
 ## Linux
 
 - Linux é sistema operacional ou kernel?
 
+O sistema operacional GNU/Linux é comumente referido apenas como Linux. No entanto, Linux é apenas o kernel (núcleo) do sistema operacional, responsável por atuar como intermediário entre o hardware e os softwares. O sistema completo normalmente inclui ferramentas do projeto GNU, por isso o nome GNU/Linux.
+
 - O que é uma distribuição Linux?
+
+Distribuição Linux, ou “distro”, é um sistema operacional completo construído com ferramentas do projeto GNU e utilizando o kernel Linux como núcleo.
 
 - Por que existem tantas distribuições?
 
+O motivo de existirem tantas distribuições é que o GNU oferece um vasto conjunto de softwares livres e de código aberto, permitindo que diferentes pessoas criem seus próprios sistemas operacionais conforme suas necessidades.
+
 - O que muda de uma distro para outra?
+
+As diferenças entre as distribuições Linux vêm das escolhas de softwares e ferramentas do projeto GNU, o que pode influenciar até mesmo a filosofia da distribuição. Entre os principais pontos que diferenciam uma distro da outra estão: o gerenciador de pacotes (como os softwares são instalados e atualizados), os repositórios (quantidade e versão dos programas disponíveis) e as ferramentas de configuração que já vêm pré-instaladas.
 
 - O Linux precisa de interface gráfica?
 
+Não, o Linux não precisa de interface gráfica (GUI) para funcionar. A base do sistema é operada via linha de comando (terminal)
+
 - Dá pra usar Linux só pelo terminal?
+
+Sim, é perfeitamente possível utilizar o Linux exclusivamente pelo terminal (CLI - Command Line Interface), sendo esta uma prática comum em servidores e por usuários avançados. O terminal oferece controle total, automação e rapidez, permitindo gerenciar arquivos, instalar softwares e configurar o sistema sem interface gráfica. 
 
 - Linux é mais difícil ou só dá mais controle ao usuário?
 
+O Linux oferece muito mais controle e customização ao usuário, mas isso vem com o preço de uma curva de aprendizado mais íngreme.
+
 - Como Linux é seguro?
 
+Por ser um sistema de código aberto, o Linux tem seu código constantemente revisado por muitos desenvolvedores. Isso permite que falhas de segurança sejam rapidamente identificadas e corrigidas, tornando-o mais seguro do que o Windows, por exemplo.
+
 - Qual é a diferença entre software livre e open-source?
+
+Software livre é baseado na ética e na filosofia das quatro liberdades: executar o programa livremente, estudar e modificar seu código-fonte, redistribuir o software e distribuir versões modificadas. Para ser considerado livre, um software deve ser de código aberto (open source), garantindo que essas liberdades sejam efetivamente possíveis.
 
 ## Dual Boot
 
 - Como dois SOs podem coexistir no mesmo computador?
 
+Dois sistemas operacionais podem coexistir em um mesmo computador ao particionar um disco rígido (HD ou SSD, por exemplo) e instalar cada sistema operacional em uma partição separada.
+
 - Eles rodam ao mesmo tempo?
 
+Pelo método de partições, dois sistemas operacionais não rodam simultaneamente; porém, é possível executá-los ao mesmo tempo através de técnicas de virtualização (ambientes virtuais), permitindo, por exemplo, criar uma máquina virtual Linux dentro do Windows usando o VirtualBox.
+  
 - Como o computador sabe qual sistema iniciar?
+
+Ao ligar o PC, a BIOS/UEFI realiza um teste de verificação chamado POST (Power-On Self-Test) e procura o dispositivo de armazenamento (SSD ou HD) que contém as instruções de inicialização. Em seguida, a BIOS/UEFI transfere o controle para um bootloader (como o GRUB no Linux), que é um software responsável por carregar o sistema operacional. No caso de existir dois sistemas operacionais (dual boot), o bootloader oferece a opção de escolha para o usuário.
 
 - O que é partição?
 
+Uma partição é a divisão lógica de um disco rígido físico (HD ou SSD) em segmentos menores e independentes
+
 - O que pode dar errado instalando dual boot?
+
+O dual boot é uma prática comum, mas é altamente recomendável fazer backup dos arquivos antes, já que a criação de partições envolve risco de perda de dados. Um erro clássico é particionar o disco de forma incorreta e acabar formatando acidentalmente uma partição com arquivos importantes.
 
 - O que é GRUB?
 
+O GNU GRUB (GRand Unified Bootloader) é o gerenciador de inicialização padrão da maioria das distribuições Linux.
+
 - O que acontece se o bootloader for sobrescrito?
 
+Voçê perde acesso ao sistema operacional, pois não consegue inicializa-lo.
+
 - Dual boot é melhor do que máquina virtual?
+
+A escolha entre dual boot e máquina virtual (VM) depende do seu objetivo e hardware. Use dual boot para desempenho máximo e uso nativo. Escolha máquina virtual para testes seguros, conveniência de rodar dois sistemas simultaneamente e facilidade de uso sem alterar partições.
 
 ## BIOS/UEFI e Secure Boot
 
 - O que é UEFI e por que substituiu a BIOS tradicional?
 
+A UEFI (Unified Extensible Firmware Interface) é um firmware moderno que desempenha as mesmas funções da BIOS, mas oferece uma alternativa mais rápida, segura e compatível com sistemas atuais.
+
 - O que é firmware?
+
+É um software gravado em um hardware(chip físico).
 
 - BIOS/UEFI fica no disco?
 
+Não, a BIOS/UEFI fica gravada no chip de memória não volátil na placa-mãe.
+
 - O que é Secure Boot?
+
+Secure Boot é um recurso de inicialização que garante que o sistema operacional só carregue softwares confiáveis, devidamente assinados pelo fabricante.
 
 - O Secure Boot impede Linux?
 
+O secure boot não impede o linux por si, só se o sistema for inicializado com softwares que não foram devidamente assinados.
+
 - Por que alguns sistemas são aceitos e outros não?
 
+Os sistemas aceitos possuem uma trusted key que permitem a inicialização com secure boot
+
 - O que significa uma chave confiável no processo de boot?
+
+Uma chave confiável (ou trusted key) no processo de boot, especificamente no contexto do Secure Boot (Inicialização Segura) UEFI, é uma assinatura digital criptográfica armazenada no firmware do computador (BIOS/UEFI) que atua como um "selo de aprovação" para softwares
+
+
 
