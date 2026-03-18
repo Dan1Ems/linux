@@ -249,5 +249,58 @@ Os sistemas aceitos possuem uma trusted key que permitem a inicialização com s
 
 Uma chave confiável (ou trusted key) no processo de boot, especificamente no contexto do Secure Boot (Inicialização Segura) UEFI, é uma assinatura digital criptográfica armazenada no firmware do computador (BIOS/UEFI) que atua como um "selo de aprovação" para softwares
 
+## Interface Gráfica
 
+- Linux tem "área de trabalho" igual ao Windows?
 
+Muitas distribuições Linux oferecem área de trabalho com janelas, painel, menu de aplicativos, pastas e ícones. A diferença é que no Linux, existem vários ambientes gráficos, então a aparência e a organização podem variar mais.
+
+- Se Linux tem interface gráfica, por que falam tanto do terminal?
+
+No Linux, o terminal tem um papel muito importante para administração, automação, aprendizado e controle do sistema. A interface existe e é útil mas o terminal permite fazer muita coisa de forma mais precisa e poderosa.
+
+- Interfaces gráficas são programas?
+
+Sim, elas são conjuntos de programas que formam o ambiente visual do sistema.
+
+- Posso trocar a interface gráfica sem trocar o Linux?
+
+Pode! Você pode manter a mesma distribuição Linux e trocar o ambiente gráfico.
+
+- Quando eu clico em um ícone, o que realmente acontece por trás?
+
+O clique gera um evento. A interface gráfica interpreta esse evento, identifica o que deve ser feito e então pede ao sistema para executar a ação, como abrir um programa ou mover um arquivo.
+
+- Por que servidores não costumam usar interface gráfica?
+
+Porque economiza recursos, reduz complexidade e geralmente não é necessário. Em servidores, costuma ser mais eficiente administrar tudo por terminal.
+
+- A interface gráfica do Linux é instalada separadamente?
+
+Em muitas distribuições, sim. Algumas já vêm com interface gráfica ponta, outras permitem instalar depois.
+
+- O mouse e as janelas fazem parte do sistema operacional ou da interface gráfica?
+
+Eles fazem parte da experiência fornecida principalmente pela interface gráfica, embora dependam do sistema operacional e dos drivers para funcionar.
+
+- O que acontece se a interface gráfica travar? O sistema inteiro trava junto?
+
+Não necessariamente. Às vezes, só o ambiente gráfico trava, e o restante do sistema continua funcionando.
+
+- O login visual faz parte da interface gráfica?
+
+Sim, normalmente ele faz parte do ambiente gráfico ou do gerenciador de login gráfico.
+
+- Dá pra abrir programas gráficos pelo terminal?
+
+Dá. Você pode digitar o nome do programa no terminal e ele abrirá a interface gráfica, se o programa for gráfico.
+
+## Terminal
+
+- Terminal e prompt são a mesma coisa?
+
+Não. O terminal é a interface textual, o prompt é a parte que indica que o sistema está esperando você digitar algo.
+
+- Terminal e shell são a mesma coisa?
+
+Também não. O terminal é onde você vê e digita. O shell é o programa que interpreta o comando.
