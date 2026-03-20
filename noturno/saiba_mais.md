@@ -371,9 +371,15 @@ Não exatamente. Você digita comandos, não "programa" necessariamente. Mas she
 
 - Qual é a diferença entre arquivo, pasta, diretório e partição?
 
+Um arquivo é a unidade de dados, a pasta/diretório é a estrutura organizadoa e a partição é a divisão lógica de um disco.
+
 - Um disco e um filesystem são a mesma coisa?
 
+Não. O disco é o dispositivo, o filesystem é a organização usada dentro dele.
+
 - Posso ter vários filesystems no mesmo computador?
+
+Sim. Você pode ter vários discos, partições e tipos de filesystems.
 
 - O que acontece quando eu salvo um arquivo?
 
@@ -383,54 +389,107 @@ Não exatamente. Você digita comandos, não "programa" necessariamente. Mas she
 
 - O que acontece quando eu deleto um arquivo?
 
+Normalmente, o sistema remove a referência para ele e marca o espaço como disponível, sem apagar imediatamente todos os dados físicos.
+
 - Arquivo apagado some na hora?
+
+Logicamente, sim. Fisicamente, os dados podem continuar até serem sobrescritos.
 
 - O filesystem é igual em todas as distribuições Linux?
 
+A lógica geral é muito parecida, mas podem existir diferenças de organização e do tipo de filesystem usado.
+
 - O Windows também tem filesystem?
+
+Todo sistema operacional precisa de algum sistema de arquivos.
 
 - O Linux reconhece pen-drive e HD externo dentro desse mesmo sistema de pastas?
 
+Sim, eles podem ser montados em algum ponto da árvore do sistema.
+
 - O que significa montar um disco dentro do sistema?
+
+Significa ligar aquele dispositivo ou partição a um diretório da árvore do sistema para torná-lo acessível.
 
 - O que fica em `/etc`?
 
+Arquivos de configuração do sistema.
+
 - O que fica em `/var`?
+
+Dados variáveis, como logs, cache e filas.
 
 - O que fica em `/usr`?
 
+Muitos programas, bibliotecas e recursos usados pelo sistema e pelos usuários.
+
 - O que fica em `/bin`?
+
+Historicamente para guardar executáveis essenciais do sistema.
 
 ## Caminhos Absolutos e Relativos
 
 - O que é um caminho?
 
+É a forma de indicar a localização de um arquivo ou diretório na árvore do sistema.
+
 - Por que preciso aprender isso?
+
+Quase tudo no terminal e boa parte da lógica do sistema depende de saber localizar arquivos e diretórios corretamente.
 
 - Qual é a diferença entre caminho absoluto e relativo?
 
+O absoluto começa da raiz `/`. O relativo depende do diretório atual.
+
 - Como sei se um caminho é absoluto ou relativo?
+
+Se começa com `/`, é absoluto. Se não, normalmente é relativo.
 
 - O que é o diretório atual?
 
+É o lugar da árvore em que sua sessão do terminal está naquele momento.
+
 - Como descubro em que diretório estou?
+
+Com o comando `pwd`
 
 - O que significam `.` e `..`?
 
+`.` = diretório atual
+`..` = diretório pai
+
 - O que acontece se eu usar um caminho relativo no lugar errado?
+
+O sistema vai procurar no contexto errado e provavelmente dará erro ou encontrará outra coisa.
 
 - Quando é melhor usar um caminho absoluto?
 
+Quando você quer precisão total e não quer depender do diretório atual.
+
 - Quando é melhor usar um caminho relativo?
+
+Quando você está trabalhando dentro de um contexto local e quer praticidade.
 
 - Um comando pode aceitar os dois tipos de caminho?
 
+Sim, muitos comandos aceitam os dois.
+
 - Caminho é a mesma coisa que endereço de arquivo?
+
+Na prática, sim. É uma forma de localizar o arquivo no sistema.
 
 - Um atalho e um caminho são a mesma coisa?
 
+Não. Um atalho ou link aponta para algo, um caminho descreve a localização.
+
 - Por que alguns caminhos só funcionam com permissão de administrador?
+
+Porque o usuário comum pode não ter permissão para acessar certos diretórios ou arquivos.
 
 - Caminho relativo serve para economizar escrita ou tem outra utilidade?
 
+Também serve para trabalhar com contexto local, tornar comando e script mais flexíveis em certas situações.
+
 - Posso misturar `..` com nomes de pastas no mesmo caminho?
+
+Pode! `../aulas/aula1.md`
