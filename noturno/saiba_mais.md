@@ -327,25 +327,48 @@ O terminal recebe o comando, o shell o interpreta e aciona o programa ou o kerne
  
 - Como o sistema sabe o que significa `ls` ou `cd`?
 
+A shell identifica o comando e sabe lidar com ele apropiadamente.
+
 - Onde os comandos ficam guardados?
+
+Alguns comandos são parte da própria shell, os chamados built-ins, como o cd. Já outros são programas externos — arquivos binários executáveis armazenados em diretórios do sistema, como o ls, que fica em /usr/bin.
 
 - O terminal fala direto com o kernel?
 
+ Não. O terminal apenas recebe a entrada dos comandos. Quem de fato aciona o kernel para executar uma ação é o shell.
+ 
 - Posso quebrar o sistema usando o terminal?
+
+Com certeza! Existem várias formas de fazer isso. Você pode, por exemplo, remover acidentalmente arquivos essenciais para o sistema, como arquivos dentro do diretório /boot, que armazena arquivos essenciais para a inicialização do sistema operacional. Caso esses arquivos sejam comprometidos, você pode perder completamente o acesso ao sistema.
 
 - Por que alguns comandos precisam de `sudo`?
 
+No Linux, cada usuário possui um nível de permissão que define o que ele pode ou não fazer no sistema. Um usuário comum, por padrão, tem permissões limitadas justamente para proteger o sistema de alterações acidentais ou não autorizadas. O sudo funciona como um crachá temporário — ao utilizá-lo antes de um comando, suas permissões são elevadas às de um superusuário, também conhecido como root, que é o usuário com acesso total ao sistema. Isso permite executar ações administrativas que um usuário comum não teria permissão de realizar, como instalar programas, modificar arquivos do sistema ou gerenciar outros usuários.
+
 - O que é Bash?
+
+O Bash é um dos tipos de shell e, na verdade, o mais utilizado. Para facilitar o entendimento, pense no shell como a espécie "cachorro" — existem várias raças, e o Bash seria uma delas. Assim como existem outros shells, como o Zsh e o Fish, o Bash é simplesmente a "raça" mais popular e amplamente adotada, sendo o shell padrão da maioria das distribuições Linux.
 
 - O terminal do Linux e o CMD do Windows são equivalentes?
 
+São parecidos, mas diferentes em filosofia e capacidades. O terminal Linux segue a filosofia de que tudo é um arquivo — programas, processos e até hardware — e isso concede ao usuário um enorme poder e flexibilidade. O Windows, por sua vez, foi desenvolvido com foco na interface gráfica, e o CMD é apenas um complemento dessa experiência, possuindo capacidades bem mais limitadas em comparação ao terminal do Linux.
+
 - O PowerShell é parecido com o terminal do Linux?
+
+O PowerShell foi desenvolvido justamente para superar as limitações do CMD, sendo uma ferramenta muito mais próxima e parecida com o terminal do Linux. No entanto, ainda existem diferenças, sendo a principal delas a filosófica: enquanto no Linux tudo é tratado como um arquivo — programas, processos e até hardware —, no PowerShell tudo é tratado como um objeto.
 
 - Como cancelar um comando que está rodando?
 
+CTRL + C
+
 - O terminal só serve para programadores?
 
+Não! O terminal é para qualquer usuário que deseje ter mais controle sobre o seu sistema. Imagine que você não seja um programador, mas queira customizar o sistema do seu jeito — o terminal é para você. Por exemplo, é possível personalizar graficamente o ambiente de trabalho de formas que interfaces gráficas convencionais não permitem, como ajustar temas, ícones e animações do sistema de maneira mais precisa e granular. Além disso, usuários que rodam videogames no Linux podem utilizar o terminal para otimizar o desempenho do sistema, seja ajustando o escalonador de CPU, configurando o driver de GPU ou gerenciando ferramentas como o GameMode, que aloca mais recursos do sistema para o jogo em execução.
+
 - Existe diferença entre digitar um comando e executar um programa?
+
+Na prática não! No Linux tudo é um arquivo — incluindo os próprios comandos. Quando você digita um comando, você está essencialmente dizendo ao Shell "encontre e execute esse arquivo pra mim."
+
 
 ## Filesystem
 
